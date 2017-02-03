@@ -1,0 +1,51 @@
+%Enable optional arguments, for the experienceitems below
+\newcommand{\optarg}[2][]{%
+  \ifthenelse{\isempty{#1}}%
+    {}% if #1 is empty
+    {#2}% if #1 is not empty
+}
+
+%Main section - Qualifications, Education, Experience.
+%Should contain one or more subsections
+\newenvironment{res_section}[1]{%
+  \vskip 6pt
+  \noindent
+  {\Large \textbf{#1}}\\
+  \rule[8pt]{\textwidth}{0.5pt}
+  \vskip -8pt
+}{
+}
+
+%Subsection within main section - Skills, Projects, etc
+%Encloses several \items in an itemize list
+\newenvironment{res_subsection}[1]{%
+  \vskip 4pt
+  \noindent
+  \textbf{\large{#1}}
+  \begin{itemize}
+}{
+  \end{itemize}
+}
+
+%Subsection within main section - Skills, Projects, etc
+%Encloses several \items in an itemize list
+\newenvironment{res_content}[1]{%
+  \vskip 4pt
+  \noindent
+  \large{#1}
+}{
+}
+
+%An item under "Experience" - subclass of subsection.
+%Includes and formats company and optional location, start, and end date.
+\newenvironment{res_experienceitem}[5]{%
+  \begin{res_subsection}{#1 - \em{%
+  #2%
+  \optarg[#3]{, #3}%
+  \optarg[#4]{, #4}%
+  \optarg[#5]{ -- #5}%
+  }}
+}{
+  \end{res_subsection}
+}
+
