@@ -5,6 +5,17 @@
     {#2}% if #1 is not empty
 }
 
+%Past/present tense switcher
+%Use this by adding either
+%\let\pt\pasttense or \let\pt\presenttense
+%at the beginning of the file
+%And then using \pt[present tense]{past tense},
+%or just \pt{past tense} if no present tense text is necessary
+%e.g. "Buil\pt[d]{t} infrastructre" or "Frob\pt{bed} widget"
+%Switching tenses is as easy as changing the \let at the top
+\newcommand{\pasttense}[2][]{{#2}}
+\newcommand{\presenttense}[2][]{{#1}}
+
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
 \newenvironment{res_section}[1]{%
