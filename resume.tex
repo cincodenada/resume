@@ -22,10 +22,9 @@
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
 
-\newcommand*\skone{\vcenter{\hbox{\includegraphics[height=10pt]{one.png}}}}
-\newcommand*\sktwo{\vcenter{\hbox{\includegraphics[height=10pt]{two.png}}}}
-\newcommand*\skthree{\vcenter{\hbox{\includegraphics[height=10pt]{three.png}}}}
-\newcommand*\skfour{\vcenter{\hbox{\includegraphics[height=10pt]{four.png}}}}
+\newcommand{\gbullet}[2][lines]{
+  \vcenter{\hbox{\includegraphics[height=10pt]{bullets/#1#2.png}}}
+}
 
 \begin{document}
 
@@ -61,40 +60,40 @@
   \setlength{\columnsep}{-8pt}
   \begin{multicols}{5}
   \begin{itemize}
-    \item[$\skfour$] AngularJS
-    \item[$\skthree$] Ansible
-    \item[$\skthree$] Bash
-    \item[$\skthree$] BigQuery
-    \item[$\skthree$] C/C++
-    \item[$\skfour$] CSS3
-    \item[$\skthree$] C\#
-    \item[$\skfour$] CakePHP
-    \item[$\skthree$] Chef
-    \item[$\skthree$] Flask
-    \item[$\skfour$] Git
-    \item[$\skfour$] HTML5
-    \item[$\sktwo$] Haskell
-    \item[$\sktwo$] Haskell
-    \item[$\skthree$] Java
-    \item[$\skfour$] Javascript
-    \item[$\sktwo$] MATLAB
-    \item[$\skfour$] MySQL
-    \item[$\skthree$] Node.js
-    \item[$\skfour$] PHP
-    \item[$\skthree$] Perl
-    \item[$\sktwo$] Piet
-    \item[$\skfour$] Puppet
-    \item[$\skfour$] Python
-    \item[$\skthree$] R
-    \item[$\skthree$] ReactJS
-    \item[$\sktwo$] Ruby
-    \item[$\skone$] Rust
-    \item[$\skthree$] SQLAlchemy
-    \item[$\skone$] Scala
-    \item[$\skfour$] Vagrant
-    \item[$\skfour$] Vim
-    \item[$\skfour$] Xdebug
-    \item[$\sktwo$] Z80/M8C/MIPS Assembly
+    \item[$\gbullet{4}$] AngularJS
+    \item[$\gbullet{3}$] Ansible
+    \item[$\gbullet{3}$] Bash
+    \item[$\gbullet{3}$] BigQuery
+    \item[$\gbullet{3}$] C/C++
+    \item[$\gbullet{4}$] CSS3
+    \item[$\gbullet{3}$] C\#
+    \item[$\gbullet{4}$] CakePHP
+    \item[$\gbullet{3}$] Chef
+    \item[$\gbullet{3}$] Flask
+    \item[$\gbullet{4}$] Git
+    \item[$\gbullet{4}$] HTML5
+    \item[$\gbullet{2}$] Haskell
+    \item[$\gbullet{2}$] Haskell
+    \item[$\gbullet{3}$] Java
+    \item[$\gbullet{4}$] Javascript
+    \item[$\gbullet{2}$] MATLAB
+    \item[$\gbullet{4}$] MySQL
+    \item[$\gbullet{3}$] Node.js
+    \item[$\gbullet{4}$] PHP
+    \item[$\gbullet{3}$] Perl
+    \item[$\gbullet{2}$] Piet
+    \item[$\gbullet{4}$] Puppet
+    \item[$\gbullet{4}$] Python
+    \item[$\gbullet{3}$] R
+    \item[$\gbullet{3}$] ReactJS
+    \item[$\gbullet{2}$] Ruby
+    \item[$\gbullet{1}$] Rust
+    \item[$\gbullet{3}$] SQLAlchemy
+    \item[$\gbullet{1}$] Scala
+    \item[$\gbullet{4}$] Vagrant
+    \item[$\gbullet{4}$] Vim
+    \item[$\gbullet{4}$] Xdebug
+    \item[$\gbullet{2}$] Z80/M8C/MIPS Assembly
   \end{itemize}
   \end{multicols}
 \end{res_content}
