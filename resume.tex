@@ -23,7 +23,10 @@
 \setsansfont{Lato}
 
 \newcommand{\gbullet}[2][circle]{
-  \vcenter{\hbox{\includegraphics[height=7pt]{bullets/#1#2.png}}}
+  \vcenter{\hbox{
+    \includegraphics[height=6pt]{bullets/#1#2.png}
+    \vspace{2pt}
+  }}
 }
 
 \begin{document}
@@ -59,7 +62,7 @@
   \def \multicolsep {4pt}
   \setlength{\columnsep}{2pt}
   \begin{multicols}{6}
-  \begin{itemize}
+  \begin{itemize}[labelsep=0em]
     \item[$\gbullet{4}$] AngularJS
     \item[$\gbullet{3}$] Ansible
     \item[$\gbullet{3}$] Bash
