@@ -18,7 +18,9 @@
 
 \input{util.tex}
 
-\let\pt\presenttense
+\let\pt\pasttense
+\let\anon\anonno
+
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
 
@@ -33,14 +35,15 @@
 
 \sffamily
 \title{Software Engineering Resume}
-\author{Joel Bradshaw}
+\author{\anon{Joel Bradshaw}{Name Lastname}}
 \date{Oct 4, 2016}
 \begin{center}
-{\Huge Joel Bradshaw}\\
+{\Huge \anon{Joel Bradshaw}{Name Lastname}}\\
 \vskip 2pt
 {\large
-    Portland, OR | 503.662.2993 | bradshaw.joel@gmail.com\\
-    cincodenada.com \ensuremath{\cdot} github.com/cincodenada}
+     Portland, OR | \anon{503.662.2993}{555.867.5309} | \anon{bradshaw.joel@gmail.com}{professional.email@gmail.com}\\
+    \anon{cincodenada.com}{myportfolio.com} \ensuremath{\cdot} github.com/\anon{cincodenada}{username}
+}
 \end{center}
 \vskip -8pt
 
@@ -100,22 +103,21 @@
 \end{res_section}
 
 \begin{res_section}{Experience}
-\begin{res_experienceitem}{CTO}{SERPs.com}{Portland, OR}{September 2009}{{\pt[Present]{March 2017}}}
+\begin{res_experienceitem}{CTO}{\anon{SERPs.com}{SaaSCo}}{Portland, OR}{September 2009}{{\pt[Present]{March 2017}}}
   \item Buil\pt[d]{t} PaaS web analytics application from the ground up to over 400 customers and \$60k MRR
   \item Plan\pt{ned} long-term and short-term roadmaps for the company in cooperation with CEO
   \item Evaluate\pt{d} feature requests and future plans, determining feasibility and priority
   \item Manage\pt{d} junior developer, assigning tasks, assisting with questions, and introducing to the codebase
-  \item Administer\pt{ed} fleet of dozens of Linux servers using Puppet, Ansible, and Chef
+  \item Develop\pt{ed} Puppet specification for fleet of dozens of Linux servers, reducing deploy time by 10x
   \item Provision\pt{ed} servers from diverse providers including Linode, DigitalOcean, AWS, and colocated bare-metal
   \item Maintain\pt{ed} and improve\pt{d} queue-worker cluster using several stages to process data from \textgreater500k daily jobs
-  \item Manage\pt{d} database servers and schema for 250GB dataset with \textgreater1m rows added per day
-  \item Update\pt{d} data and structure to adapt to changing needs of the application
-  \item Supervise\pt{d} transition to a sharded HA database cluster using MySQL Fabric and data warehousing
+  \item Manage\pt{d} MySQL servers and schema for 250GB dataset with \textgreater1m rows added per day
+  \item Supervise\pt{d} transition to a sharded HA database cluster using MySQL Fabric and data warehousing,
+        improving primary customer-facing page loadtime \textgreater100x for large customers
   \item Add\pt{ed} functionality and fix\pt{ed} bugs in outdated C++ extension, allowing PHP to connect to current Fabric
-  \item Wr\pt[i]{o}te hundreds of unit tests to cover thousands of LOC, and set up Jenkins continuous integration server
+  \item Wr\pt[i]{o}te hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
   \item Perform\pt{ed} cleanup and consistency checks on BigQuery datasets for secondary analysis of data
-  \item Buil\pt[d]{t} out monitoring system with TICK stack and Grafana to create a dashboard for application processes
-  \item Attend\pt{ed} to any other technical needs as the company develop\pt[s]{ed} them
+  \item Buil\pt[d]{t} monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
 \end{res_experienceitem}
 \begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{September 2010}{June 2011}
   \item Tested and filed bug reports for custom in-house applications on a variety of platforms
