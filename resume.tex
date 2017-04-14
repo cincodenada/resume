@@ -18,6 +18,8 @@
 \input{util.tex}
 
 \let\pt\pasttense
+\let\anon\anonyes
+
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
 
@@ -25,14 +27,15 @@
 
 \sffamily
 \title{Software Engineering Resume}
-\author{Joel Bradshaw}
+\author{\anon{Joel Bradshaw}{Name Lastname}}
 \date{Oct 4, 2016}
 \begin{center}
-{\Huge Joel Bradshaw}\\
+{\Huge \anon{Joel Bradshaw}{Name Lastname}}\\
 \vskip 2pt
 {\large
-    503.662.2993 \ensuremath{\cdot} Portland, OR \ensuremath{\cdot} bradshaw.joel@gmail.com\\
-    cincodenada.com \ensuremath{\cdot} github.com/cincodenada}
+    \anon{503.662.2993}{555.867.5309} \ensuremath{\cdot} Portland, OR \ensuremath{\cdot} \anon{bradshaw.joel@gmail.com}{professional.email@gmail.com}\\
+    \anon{cincodenada.com}{myportfolio.com} \ensuremath{\cdot} github.com/\anon{cincodenada}{username}
+}
 \end{center}
 \vskip -8pt
 
@@ -61,7 +64,7 @@
 \end{res_section}
 
 \begin{res_section}{Experience}
-\begin{res_experienceitem}{CTO}{SERPs.com}{Portland, OR}{September 2009}{{\pt[Present]{March 2017}}}
+\begin{res_experienceitem}{CTO}{\anon{SERPs.com}{SaaSCo}}{Portland, OR}{September 2009}{{\pt[Present]{March 2017}}}
   \item Buil\pt[d]{t} PaaS web analytics application from the ground up to over 400 customers and \$60k MRR
   \item Plan\pt{ned} long-term and short-term roadmaps for the company in cooperation with CEO
   \item Evaluate\pt{d} feature requests and future plans, determining feasibility and priority
