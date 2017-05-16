@@ -53,12 +53,19 @@
 %An item under "Experience" - subclass of subsection.
 %Includes and formats company and optional location, start, and end date.
 \newenvironment{res_experienceitem}[5]{%
-  \begin{res_subsection}{#1 - \em{%
-  #2%
-  \optarg[#3]{, #3}%
-  \optarg[#4]{, #4}%
-  \optarg[#5]{ -- #5}%
-  }}
+  \begin{res_subsection}{#1%
+      \textit{%
+          \optarg[#2]{ - #2}%
+          \optarg[#3]{, #3}%
+      }
+      \textnormal{
+          \sffamily
+          \normalsize
+          \hfill
+          \optarg[#4]{#4}%
+          \optarg[#5]{ -- #5}%
+      }
+  }
 }{
   \end{res_subsection}
 }
