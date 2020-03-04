@@ -26,7 +26,7 @@
 \setsansfont{Lato}
 
 \newif\ifrobots
-\robotsfalse
+\robotstrue
 
 \begin{document}
 
@@ -62,10 +62,10 @@
     \item Familiar with C, C\#, Java, R, Node.js, Chef, Ansible, Perl, Bash scripting
     \item Dabbled in/interested in Rust, Go, Scala, Haskell, Piet, MATLAB, Z80/M8C/MIPS Assembly
   \end{itemize}
-  \item Main tools and platforms used include Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities
-  \item Passionate about charts, graphs, mapping, and other beautiful data
+  \item Main tools and platforms used include Vim, Git, Vagrant, Docker, KiCad, OpenSCAD
+  \item Passionate about charts, graphs, mapping, and other beautiful (geo)data
  \ifrobots
-  \item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
+  \item Continued personal experience working with microcontrollers and EDA
  \fi
 \end{res_subsection}
 \end{res_section}
@@ -93,11 +93,21 @@
   \item Wrote hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
   \item Built monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
 \end{res_experienceitem}
+\ifrobots 
+\begin{res_experienceitem}{Controller Pro}{Personal Project}{}{July 2013}{Ongoing}
+  \item Wrote firmware to interface with classic controllers as modern USB HID devices
+  \item Implemented communication with various proprietary protocols using AVR-based microcontroller
+  \item Laid out several iterations of PCBs using Eagle and KiCad, optimizing for simplicity and ease of assembly
+  \item Created novel algorithm to safely detect controller presence and identity
+  \item Designed and printed custom hardware enclosure using OpenSCAD and FDM
+\end{res_experienceitem}
+\else
 \begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{September 2010}{June 2011}
   \item Tested and filed bug reports for custom in-house applications on a variety of platforms
   \item Developed utilities for better management of custom applications, including adding them to a Git repository
   \item Created and cleaned up hundreds of Visio drawings of building layouts for firefighter reference
 \end{res_experienceitem}
+\fi
 \begin{res_experienceitem}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{June 2010}{September 2010}
   \item Modified software and hardware in an existing product to meet higher safety requirements
   \item Wrote firmware to support new hardware in existing codebase, integrating with existing test suite
