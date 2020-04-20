@@ -3,13 +3,16 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,12pt]{article}
 \usepackage{multicol}
 \usepackage[margin=0.5in,nohead,nofoot]{geometry}
 \usepackage{mathptmx}
 \usepackage{enumitem}
 \usepackage{xifthen}
 \usepackage{fontspec}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{changepage}
 \pagestyle{empty}
 
 %Collapse the spaces in list items for compactness
@@ -23,21 +26,25 @@
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
 
-\begin{document}
 
-\sffamily
+\begin{document}
 \title{Software Engineering Resume}
 \author{\anon{Joel Bradshaw}{Name Lastname}}
 \date{Nov 14, 2019}
-\begin{center}
-{\Huge \anon{Joel Bradshaw}{Name Lastname}}\\
-\vskip 2pt
+
+\columnratio{0.33}
+\begin{paracol}{2}
+  \nobackgroundcolor{l}
+  \nobackgroundcolor{t}
+  \backgroundcolor{c[0]}{lightgray}
+  \backgroundcolor{C[0](10000pt,10000pt)(0.5\columnsep,10000pt)}{lightgray}
+  \begin{adjustwidth}{0in}{1in}
+\sffamily
+{\Huge \anon{Joel\newline Bradshaw}{Name Lastname}}\\
 {\large
     \anon{503.662.2993}{555.867.5309} \ensuremath{\cdot} Portland, OR \ensuremath{\cdot} \anon{bradshaw.joel@gmail.com}{professional.email@gmail.com}\\
     \anon{cincodenada.com}{myportfolio.com} \ensuremath{\cdot} github.com/\anon{cincodenada}{username}
 }
-\end{center}
-\vskip -8pt
 
 \rmfamily
 \begin{res_section}{Summary of Qualifications}
@@ -62,6 +69,11 @@
   \item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
 \end{res_subsection}
 \end{res_section}
+
+  \end{adjustwidth}
+\switchcolumn
+  \begin{adjustwidth}{0.25in}{0.5in}
+  \vspace*{0.25in}
 
 \begin{res_section}{Experience}
   \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{July 2017}{September 2019}
@@ -110,5 +122,8 @@
 }
 \end{res_content}
 \end{res_section}
+
+\end{adjustwidth}
+\end{paracol}
 
 \end{document}

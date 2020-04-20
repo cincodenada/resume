@@ -1,3 +1,3 @@
 #!/bin/bash
-xelatex resume.tex
-xdg-open resume.pdf &
+xelatex resume.tex && \
+xdg-open resume.pdf
