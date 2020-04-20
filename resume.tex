@@ -13,10 +13,14 @@
 \usepackage{paracol}
 \usepackage{xcolor}
 \usepackage{changepage}
+\usepackage{fontspec}
+\usepackage{fontawesome}
 \pagestyle{empty}
 
 %Collapse the spaces in list items for compactness
 \setlist{nolistsep}
+
+\linespread{1.15}
 
 \input{util.tex}
 
@@ -34,17 +38,33 @@
 
 \columnratio{0.33}
 \begin{paracol}{2}
-  \nobackgroundcolor{l}
-  \nobackgroundcolor{t}
+  \switchcolumn*[{
+    \vspace*{4pt}
+    \sffamily
+    \begin{color}{white}
+    \Huge \anon{Joel Bradshaw}{Name Lastname}
+    \hspace{\fill}
+    \large Full-stack Software Developer
+    \end{color}
+    \vspace*{12pt}
+  }]
+  \switchcolumn
   \backgroundcolor{c[0]}{lightgray}
   \backgroundcolor{C[0](10000pt,10000pt)(0.5\columnsep,10000pt)}{lightgray}
+  \backgroundcolor{s}{gray}
   \begin{adjustwidth}{0in}{1in}
-\sffamily
-{\Huge \anon{Joel\newline Bradshaw}{Name Lastname}}\\
-{\large
-    \anon{503.662.2993}{555.867.5309} \ensuremath{\cdot} Portland, OR \ensuremath{\cdot} \anon{bradshaw.joel@gmail.com}{professional.email@gmail.com}\\
-    \anon{cincodenada.com}{myportfolio.com} \ensuremath{\cdot} github.com/\anon{cincodenada}{username}
-}
+
+  \vspace{12pt}
+  \sffamily
+  {\large
+    \begin{tabular}{c l}
+      \faMobilePhone & \anon{503.662.2993}{555.867.5309}\\
+      \faMapMarker & Portland, OR\\
+      \faEnvelope & \anon{bradshaw.joel@gmail.com}{professional.email@gmail.com}\\
+      \faGlobe & \anon{cincodenada.com}{myportfolio.com}\\
+      \faGithub & github.com/\anon{cincodenada}{username}
+    \end{tabular}
+  }
 
 \rmfamily
 \begin{res_section}{Summary of Qualifications}
@@ -56,13 +76,43 @@
   \item Engaging productively within a team to resolve disagreements and help best use members' individual skills
   \item Working and communicating with end-users personably and comfortably
 \end{res_subsection}
-\begin{res_subsection}{Proficiencies:}
-  \item Languages:
+\begin{res_subsection}{Languages}
+  \item Experienced in:
   \rmfamily
   \begin{itemize}
-    \item Experienced in C++17, Javascript, Python, Puppet, BigQuery, SQL, PHP, HTML5/CSS3
-    \item Familiar with C, C\#, Java, R, Node.js, Chef, Ansible, Perl, Bash scripting
-    \item Dabbled in/interested in Ruby, Rust, Go, Scala, Haskell, Piet, MATLAB, Z80/M8C/MIPS Assembly
+    \item Modern C++
+    \item Javascript
+    \item Javascript
+    \item Python
+    \item Puppet
+    \item BigQuery
+    \item SQL
+    \item PHP
+    \item HTML5/CSS3
+  \end{itemize}
+  \item Familiar with:
+  \begin{itemize}
+
+    \item C
+    \item C\#
+    \item Java
+    \item R
+    \item Node.js
+    \item Chef
+    \item Ansible
+    \item Perl
+    \item Bash scripting
+  \end{itemize}
+  \item Dabbled in/interested in:
+  \begin{itemize}
+    \item Ruby
+    \item Rust
+    \item Go
+    \item Scala
+    \item Haskell
+    \item Piet
+    \item MATLAB
+    \item Z80/M8C/MIPS Assembly
   \end{itemize}
   \item Main tools and platforms used include Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities
   \item Passionate about charts, graphs, mapping, and other beautiful data
