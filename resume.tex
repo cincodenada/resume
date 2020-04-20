@@ -5,7 +5,7 @@
 
 \documentclass[letterpaper,12pt]{article}
 \usepackage{multicol}
-\usepackage[margin=0.5in,nohead,nofoot]{geometry}
+\usepackage[margin=0.25in,nohead,nofoot]{geometry}
 \usepackage{mathptmx}
 \usepackage{enumitem}
 \usepackage{xifthen}
@@ -36,7 +36,8 @@
 \author{\anon{Joel Bradshaw}{Name Lastname}}
 \date{Nov 14, 2019}
 
-\columnratio{0.33}
+\setlength{\columnsep}{0.5in}
+\columnratio{0.35}
 \begin{paracol}{2}
   \switchcolumn*[{
     \vspace*{4pt}
@@ -49,14 +50,15 @@
     \vspace*{12pt}
   }]
   \switchcolumn
-  \backgroundcolor{c[0]}{lightgray}
-  \backgroundcolor{C[0](10000pt,10000pt)(0.5\columnsep,10000pt)}{lightgray}
+  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
+  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
   \backgroundcolor{s}{gray}
-  \begin{adjustwidth}{0in}{1in}
 
   \vspace{12pt}
   \sffamily
   {\large
+    \setlength{\tabcolsep}{3pt}
+    \noindent
     \begin{tabular}{c l}
       \faMobilePhone & \anon{503.662.2993}{555.867.5309}\\
       \faMapMarker & Portland, OR\\
@@ -67,63 +69,55 @@
   }
 
 \rmfamily
-\begin{res_section}{Summary of Qualifications}
-\begin{res_subsection}{Skills:}
-  \item Building performance-sensitive, high-throughput systems, balancing speed, complexity, and maintainability
-  \item Developing distributed, reliable applications in a multi-cloud environment
-  \item Administering Linux systems, tracing logfiles and monitoring, efficiently troubleshooting across the full stack
-  \item Quickly understanding large projects and systems, learning new languages and technologies as needed
-  \item Engaging productively within a team to resolve disagreements and help best use members' individual skills
-  \item Working and communicating with end-users personably and comfortably
-\end{res_subsection}
-\begin{res_subsection}{Languages}
-  \item Experienced in:
+%\begin{res_subsection}{Skills:}
+%  \item Building performance-sensitive, high-throughput systems, balancing speed, complexity, and maintainability
+%  \item Developing distributed, reliable applications in a multi-cloud environment
+%  \item Administering Linux systems, tracing logfiles and monitoring, efficiently troubleshooting across the full stack
+%  \item Quickly understanding large projects and systems, learning new languages and technologies as needed
+%  \item Engaging productively within a team to resolve disagreements and help best use members' individual skills
+%  \item Working and communicating with end-users personably and comfortably
+%\end{res_subsection}
+\begin{res_section}{Proficiencies}
+\begin{res_subsection}{Experienced in:}
   \rmfamily
-  \begin{itemize}
-    \item Modern C++
-    \item Javascript
-    \item Javascript
-    \item Python
-    \item Puppet
-    \item BigQuery
-    \item SQL
-    \item PHP
-    \item HTML5/CSS3
-  \end{itemize}
-  \item Familiar with:
-  \begin{itemize}
-
-    \item C
-    \item C\#
-    \item Java
-    \item R
-    \item Node.js
-    \item Chef
-    \item Ansible
-    \item Perl
-    \item Bash scripting
-  \end{itemize}
-  \item Dabbled in/interested in:
-  \begin{itemize}
-    \item Ruby
-    \item Rust
-    \item Go
-    \item Scala
-    \item Haskell
-    \item Piet
-    \item MATLAB
-    \item Z80/M8C/MIPS Assembly
-  \end{itemize}
-  \item Main tools and platforms used include Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities
-  \item Passionate about charts, graphs, mapping, and other beautiful data
-  \item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
+   \item Modern C++
+   \item Javascript
+   \item Python
+   \item Puppet
+   \item BigQuery
+   \item SQL
+   \item PHP
+   \item HTML5/CSS3
 \end{res_subsection}
+\begin{res_subsection}{Familiar with:}
+   \item C
+   \item C\#
+   \item Java
+   \item R
+   \item Node.js
+   \item Chef
+   \item Ansible
+   \item Perl
+   \item Bash scripting
+\end{res_subsection}
+\begin{res_subsection}{Dabbled in/interested in:}
+   \item Ruby
+   \item Rust
+   \item Go
+   \item Scala
+   \item Haskell
+   \item Piet
+   \item MATLAB
+   \item Z80/M8C/MIPS Assembly
+\end{res_subsection}
+%\item Main tools and platforms used include Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities
+%\item Passionate about charts, graphs, mapping, and other beautiful data
+%\item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
 \end{res_section}
 
-  \end{adjustwidth}
 \switchcolumn
-  \begin{adjustwidth}{0.25in}{0.5in}
-  \vspace*{0.25in}
+  % res_section already has 6pt of space
+  \vspace{6pt}
 
 \begin{res_section}{Experience}
   \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{July 2017}{September 2019}
@@ -173,7 +167,6 @@
 \end{res_content}
 \end{res_section}
 
-\end{adjustwidth}
 \end{paracol}
 
 \end{document}
