@@ -17,6 +17,7 @@
 \usepackage{fontawesome}
 \pagestyle{empty}
 
+
 %Collapse the spaces in list items for compactness
 \setlist{nolistsep}
 
@@ -29,6 +30,7 @@
 
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
 
 
 \begin{document}
@@ -38,7 +40,13 @@
 
 \setlength{\columnsep}{0.5in}
 \columnratio{0.35}
+
+
 \begin{paracol}{2}
+  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
+  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
+  \backgroundcolor{s}{gray}
+
   \switchcolumn*[{
     \vspace*{4pt}
     \sffamily
@@ -50,9 +58,6 @@
     \vspace*{12pt}
   }]
   \switchcolumn
-  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
-  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
-  \backgroundcolor{s}{gray}
 
   \vspace{12pt}
   \sffamily
@@ -68,7 +73,6 @@
     \end{tabular}
   }
 
-\rmfamily
 %\begin{res_subsection}{Skills:}
 %  \item Building performance-sensitive, high-throughput systems, balancing speed, complexity, and maintainability
 %  \item Developing distributed, reliable applications in a multi-cloud environment
@@ -78,41 +82,38 @@
 %  \item Working and communicating with end-users personably and comfortably
 %\end{res_subsection}
 \begin{res_section}{Proficiencies}
-\begin{res_subsection}{Experienced in:}
-  \rmfamily
-   \item Modern C++
-   \item Javascript
-   \item Python
-   \item Puppet
-   \item BigQuery
-   \item SQL
-   \item PHP
-   \item HTML5/CSS3
-\end{res_subsection}
-\begin{res_subsection}{Familiar with:}
-   \item C
-   \item C\#
-   \item Java
-   \item R
-   \item Node.js
-   \item Chef
-   \item Ansible
-   \item Perl
-   \item Bash scripting
-\end{res_subsection}
-\begin{res_subsection}{Dabbled in/interested in:}
-   \item Ruby
-   \item Rust
-   \item Go
-   \item Scala
-   \item Haskell
-   \item Piet
-   \item MATLAB
-   \item Z80/M8C/MIPS Assembly
-\end{res_subsection}
-%\item Main tools and platforms used include Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities
-%\item Passionate about charts, graphs, mapping, and other beautiful data
-%\item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
+  \begin{res_content}{\textbf{Experienced in:}}%
+    \begin{sloppypar}%
+    \raggedright
+    \noindent%
+    Modern C++, Javascript, Python, Puppet, BigQuery, SQL, PHP, HTML5/CSS3
+    \end{sloppypar}
+  \end{res_content}
+  \begin{res_content}{\textbf{Familiar with:}}%
+    \begin{sloppypar}%
+    \raggedright
+    \noindent%
+    C, C\#, Java, R, Node.js, Chef, Ansible, Perl, Bash scripting
+    \end{sloppypar}
+  \end{res_content}
+  \begin{res_content}{\textbf{Dabbled in/interested in:}}%
+    \begin{sloppypar}%
+    \raggedright
+    \noindent%
+    Ruby, Rust, Go, Scala, Haskell, Piet, MATLAB, Z80/M8C/MIPS Assembly
+    \end{sloppypar}
+  \end{res_content}
+
+  \begin{res_para}{Tools and Platforms:}%
+    \raggedright
+    Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities\\
+  \end{res_para}
+  \begin{res_para}{Interests:}%
+    \raggedright
+    Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities\\
+    Passionate about charts, graphs, mapping, and other beautiful data.\\
+    Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
+  \end{res_para}
 \end{res_section}
 
 \switchcolumn
@@ -120,7 +121,7 @@
   \vspace{6pt}
 
 \begin{res_section}{Experience}
-  \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{July 2017}{September 2019}
+  \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{2017}{2019}
   \item Maintained cloud-native DNS platform using 9 billion daily measurements to make 3 billion daily decisions
   \item Led implementation of just-in-time DNSSEC in our dynamic DNS server, consulting RFCs and real-world usage
   \item Integrated new datastream into pipeline, working with partner vendor to identify and analyze key metrics
@@ -128,7 +129,7 @@
   \item Analyzed and provided visibility into BigQuery usage costs, immediately reducing our monthly spend by 20\%
   \item Acted as liaison between teams, helping resolve disagreements and come up with solutions to disparate goals
 \end{res_experienceitem}
-\begin{res_experienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{September 2009}{{\pt[Present]{March 2017}}}
+\begin{res_experienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{Sep 2009}{{\pt[Present]{Mar 2017}}}
   \item Buil\pt[d]{t} SaaS web analytics application from the ground up to over 400 customers and \$60k MRR
   \item Plan\pt{ned} long-term and short-term roadmaps for the company in cooperation with CEO
   \item Manage\pt{d} junior developer, assigning tasks, assisting with questions, and introducing to the codebase
@@ -142,13 +143,13 @@
   \item Wr\pt[i]{o}te hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
   \item Buil\pt[d]{t} monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
 \end{res_experienceitem}
-\begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{September 2010}{June 2011}
+\begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{Sep 2010}{Jun 2011}
   \item Tested and filed bug reports for custom in-house applications on a variety of platforms
   \item Performed initial research to suggest fixes to development team, implementing some fixes personally
   \item Developed utilities for better management of custom applications, including adding them to a Git repository
   \item Created and cleaned up hundreds of Visio drawings of building layouts for firefighter reference
 \end{res_experienceitem}
-\begin{res_experienceitem}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{June 2010}{September 2010}
+\begin{res_experienceitem}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{Jun 2010}{Sep 2010}
   \item Modified software and hardware in an existing product to meet higher safety requirements
   \item Verified new hardware and firmware in established testing harness and added tests for new components
   \item Designed part of a complex system in coordination with a team of software and hardware engineers
@@ -167,6 +168,9 @@
 \end{res_content}
 \end{res_section}
 
+% This gets us background on the second page
+% Not really sure why but it kinda makes sense?
+\flushpage
 \end{paracol}
 
 \end{document}
