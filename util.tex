@@ -31,11 +31,11 @@
 
 %Subsection within main section - Skills, Projects, etc
 %Encloses several \items in an itemize list
-\newenvironment{res_subsection}[1]{%
+\newenvironment{res_subsection}[2][]{%
   \noindent
-  {\large \textbf{#1}}
+  {\large \textbf{#2}}
   \vskip 2pt
-  \begin{itemize}
+  \begin{itemize}[#1]
   \setlength\itemsep{0.25em}
   \raggedright
 }{
