@@ -52,15 +52,15 @@
   \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
   \backgroundcolor{s}{gray}
 
-  \switchcolumn*[{
-    \vspace*{4pt}
+  \switchcolumn*[{%
+    \vspace*{0.25em}
     \sffamily
     \begin{color}{white}
     \Huge \anon{Joel Bradshaw}{Name Lastname}
     \hspace{\fill}
     \large Full-stack Senior Developer
     \end{color}
-    \vspace*{12pt}
+    \vspace*{1em}
   }]
   \switchcolumn
 
@@ -69,6 +69,7 @@
   {\large
     \vspace{-0.25em} % eat up space above first row
     \setlength{\tabcolsep}{0.25em}
+    \renewcommand{\arraystretch}{1.1}
     \noindent
     \begin{tabular}{c l}
       \faMobilePhone & \anon{503.662.2993}{555.867.5309}\\
@@ -79,6 +80,7 @@
     \end{tabular}
   }
 
+\vspace{1.5em}
 \begin{res_section}{Summary}
   \noindent
   \begin{minipage}{\columnwidth}
@@ -90,6 +92,8 @@
   Constantly reminded that all software is built by people, and thus strive to facilitate healthy communication between and within teams.
   \end{minipage}
 \end{res_section}
+
+\vspace{2em}
 \begin{res_section}{Proficiencies}
   \begin{res_para}{Experienced in:}%
     \raggedright
@@ -103,6 +107,7 @@
     \raggedright
     Rust, Go, Scala, Haskell, Piet, Z80/M8C/MIPS Assembly
   \end{res_para}
+
   \begin{res_para}{Tools and Platforms:}%
     \raggedright
     Vim, Git, Vagrant, Docker, LAMP stack, GNU utilities\\
@@ -176,7 +181,7 @@
 
   \noindent Bachelor of Science, Electrical Engineering
 
-  \textnormal{
+  \textnormal{%
       \sffamily
       \normalsize
       \hfill
