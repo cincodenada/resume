@@ -22,7 +22,6 @@
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
 \newenvironment{rsection}[1]{%
-  \vskip 0.5em
   \noindent
   {\sffamily \Large \textbf{#1}}\\
   \rule[8pt]{\textwidth}{0.5pt}
@@ -36,10 +35,9 @@
   \vskip 6pt
   \noindent
   {\sffamily \large \textbf{#1}}
-  \vskip 2pt
-  \raggedright
+  \raggedright{}
 }{
-  \vskip 0.5em
+  \vspace{0.5em}
 }
 
 \newenvironment{rsubitems}[1]{%
@@ -62,12 +60,12 @@
 }
 
 
-\newcommand{\rexperiencehead}[5]{
+\newcommand{\rexperiencehead}[5]{%
   \large \textbf{#1}%
   \hfill
   \normalsize
   \optarg[#4]{#4}%
-  \optarg[#5]{ -- #5}%
+  \optarg[#5]{\ -- #5}% chktex 8
 
   \noindent
   \optarg[#2]{#2}%
@@ -82,16 +80,16 @@
   \rexperiencehead{#1}{#2}{#3}{#4}{#5}
   \begin{itemize}
   \setlength\itemsep{0.25em}
-  \raggedright
-  \vskip 0.5em
+  \raggedright{}
+  \vspace{0.5em}
 }{
   \end{itemize}
-  \vskip 0.5em
+  \vspace{0.5em}
 }
 
 \newenvironment{rexperience}[5]{%
   \rexperiencehead{#1}{#2}{#3}{#4}{#5}
-  \vskip 0.5em
+  \vspace{0.5em}
 }{
-  \vskip 0.5em
+  \vspace{0.5em}
 }
