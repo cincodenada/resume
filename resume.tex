@@ -3,6 +3,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
+\errorcontextlines=200
 \documentclass[letterpaper,12pt]{article}
 \usepackage{multicol}
 \usepackage[margin=0.25in,nohead,nofoot]{geometry}
@@ -77,7 +78,7 @@
 
 
 \vskip 1.5em
-\begin{res_section}{Summary}
+\begin{rsection}{Summary}
   \noindent
   \begin{minipage}{\columnwidth}
     \small
@@ -94,27 +95,27 @@
     within teams, and encouraging less-experienced developers,
     keeping in focus that software is developed by people.
    \end{minipage}
-\end{res_section}
+\end{rsection}
 \vskip 2em
-\begin{res_section}{Proficiencies}
-  \begin{res_para}{Experienced in:}%
+\begin{rsection}{Proficiencies}
+  \begin{rpara}{Experienced in:}%
     \raggedright
     C++17, Javascript, Python, Puppet, BigQuery, SQL, PHP, HTML5/CSS3
-  \end{res_para}
-  \begin{res_para}{Familiar with:}%
+  \end{rpara}
+  \begin{rpara}{Familiar with:}%
     \raggedright
     C, C\#, Java, R, Node.js, Chef, Ansible, Perl, Bash scripting
-  \end{res_para}
-  \begin{res_para}{Dabbled in/interested in:}%
+  \end{rpara}
+  \begin{rpara}{Dabbled in/interested in:}%
     \raggedright
     Rust, Go, Scala, Haskell, Ruby, Piet, Z80/M8C/MIPS Assembly
-  \end{res_para}
+  \end{rpara}
   \newpage
-  \begin{res_para}{Tools and Platforms:}%
+  \begin{rpara}{Tools and Platforms:}%
     \raggedright
     Vim, Git, Vagrant, Docker, Datadog, LAMP stack, GNU utilities
-  \end{res_para}
-  \begin{res_subsection}[
+  \end{rpara}
+  \begin{rsubitems}[
     leftmargin=1.5em,
     itemindent=0em,
     labelwidth=1.5em
@@ -128,8 +129,8 @@
     \item Engaging with peers to resolve disagreements
     %\item Engaging productively within a team to resolve disagreements and help best use members' individual skills
     %\item Working and communicating with end-users personably and comfortably
-  \end{res_subsection}
-  \begin{res_subsection}[
+  \end{rsubitems}
+  \begin{rsubitems}[
     leftmargin=1.5em,
     itemindent=0em,
     labelwidth=1.5em
@@ -137,15 +138,15 @@
     \item Passionate about charts, graphs, maps, and other beautiful data\\
     \item Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
     \item Amateur astronomer
-  \end{res_subsection}
-\end{res_section}
+  \end{rsubitems}
+\end{rsection}
 
 \switchcolumn
-  % res_section already has 6pt of space
+  % rsection already has 6pt of space
   \vspace{6pt}
 
-\begin{res_section}{Experience}
-  \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{Jul 2017}{Oct 2019}
+\begin{rsection}{Experience}
+\begin{rexperienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{Jul 2017}{Oct 2019}
   \item Maintained cloud-native DNS platform using 9 billion daily measurements to make 3 billion daily decisions
   \item Led implementation of just-in-time DNSSEC in our dynamic DNS server, consulting RFCs and real-world usage
   \item Integrated new datastream into pipeline, working with partner vendor to identify and analyze key metrics
@@ -153,8 +154,8 @@
   \item Analyzed and provided visibility into BigQuery usage costs, immediately reducing our monthly spend by 20\%
   \item Used perf and flamegraphs to identify and rewrite bottlenecks, e.g. reducing config read time by 30\%
   \item Acted as liaison between teams, helping to devise solutions that accomplish everyone's goals
-\end{res_experienceitem}
-\begin{res_experienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{Sep 2009}{Mar 2017}
+\end{rexperienceitem}
+\begin{rexperienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{Sep 2009}{Mar 2017}
   \item Built SaaS web analytics application from the ground up to over 400 customers and \$60k MRR
   \item Mentored junior developer, assigning tasks, assisting with questions, and introducing to the codebase
   \item Developed Puppet spec to manage our infrastructure, increasing reliability and reducing deploy time 10x
@@ -166,21 +167,21 @@
   %\item Added functionality and fixed bugs in outdated C extension, allowing PHP to connect to current Fabric
   \item Wrote hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
   \item Built monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
-\end{res_experienceitem}
-\begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{Sep 2010}{Jun 2011}
-  \item Tested and filed bug reports for custom in-house applications on a variety of platforms
-  \item Performed initial research to suggest fixes to development team, implementing some fixes personally
-  \item Developed utilities for better management of custom applications, including adding them to a Git repository
+\end{rexperienceitem}
+\begin{rexperience}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{Sep 2010}{Jun 2011}
+  % \item Tested and filed bug reports for custom in-house applications on a variety of platforms
+  % \item Performed initial research to suggest fixes to development team, implementing some fixes personally
+  % \item Developed utilities for better management of custom applications, including adding them to a Git repository
   %\item Created and cleaned up hundreds of Visio drawings of building layouts for firefighter reference
-\end{res_experienceitem}
-\begin{res_experienceitem}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{Jun 2010}{Sep 2010}
-  \item Modified software and hardware in an existing product to meet higher safety requirements
-  \item Wrote firmware to support new hardware in existing codebase, integrating with existing test suite
-\end{res_experienceitem}
-\end{res_section}
+\end{rexperience}
+\begin{rexperience}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{Jun 2010}{Sep 2010}
+  % \item Modified software and hardware in an existing product to meet higher safety requirements
+  % \item Wrote firmware to support new hardware in existing codebase, integrating with existing test suite
+\end{rexperience}
+\end{rsection}
 
-\begin{res_section}{Education}
-\begin{res_content}{Bachelor of Science, Computer Science
+\begin{rsection}{Education}
+\begin{rcontent}{Bachelor of Science, Computer Science
 
   \noindent Bachelor of Science, Electrical Engineering
 
@@ -190,21 +191,21 @@
       \hfill
       Seattle Pacific University, June 2011}
 }
-\end{res_content}
-\end{res_section}
+\end{rcontent}
+\end{rsection}
 
-\begin{res_section}{Volunteer Work}
-  \begin{res_experienceitem}{Riser Coordinator}{Portland Gay Men's Chorus}{Portland, OR}{Nov 2015}{Present}
+\begin{rsection}{Volunteer Work}
+  \begin{rexperienceitem}{Riser Coordinator}{Portland Gay Men's Chorus}{Portland, OR}{Nov 2015}{Present}
     \item Coordinate with storage company and production team to schedule delivery and pickup of risers for every show
     \item Lead crew of \textasciitilde12 to construct riser system, orienting new members and delegating to trusted members
     \item Direct all-hands teardown for a safe and timely strike with crew of 30+ members of all experience levels
     \item Design and verify new riser layouts to meet changing production needs, ordering new parts as necessary
-  \end{res_experienceitem}
-  \begin{res_experienceitem}{Section Representative}{Portland Gay Men's Chorus}{Portland, OR}{Sep 2012}{Present}
+  \end{rexperienceitem}
+  \begin{rexperienceitem}{Section Representative}{Portland Gay Men's Chorus}{Portland, OR}{Sep 2012}{Present}
     \item Field questions and issues from section of \textasciitilde30 members, solving or escalating as necessary
     \item Coordinate with membership team to address shifting needs of the chorus and its administrative team
-  \end{res_experienceitem}
-\end{res_section}
+  \end{rexperienceitem}
+\end{rsection}
 
 % This gets us background on the second page
 % Not really sure why but it kinda makes sense?
