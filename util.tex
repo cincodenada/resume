@@ -22,7 +22,6 @@
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
 \newenvironment{rsection}[1]{%
-  \vskip 0.5em
   \noindent
   {\Large \textbf{#1}}\\
   \rule[8pt]{\columnwidth}{0.5pt}
@@ -34,16 +33,14 @@
 \newenvironment{rsubsection}[1]{%
   \noindent
   {\large \textbf{#1}}
-  \vskip 2pt
-  \raggedright
+  \raggedright{}
 }{
-  \vskip 0.5em
+  \vspace{0.5em}
 }
 
 \newenvironment{rsubitems}[2][]{%
   \begin{rsubsection}{#2}
   \begin{itemize}[#1]
-  \setlength\itemsep{0.25em}
 }{
   \end{itemize}
   \end{rsubsection}
@@ -58,7 +55,7 @@
   \large{#1}
   \normalsize
 }{
-  \vskip 0.5em
+  \vspace{0.5em}
 }
 
 \newenvironment{rpara}[1]{%
@@ -69,15 +66,15 @@
   \noindent%
 }{
   \end{sloppypar}
-  \vskip 1em
+  \vspace{1em}
 }
 
-\newcommand{\rexperiencehead}[5]{
+\newcommand{\rexperiencehead}[5]{%
   \large \textbf{#1}%
   \hfill
   \normalsize
   \optarg[#4]{#4}%
-  \optarg[#5]{ -- #5}%
+  \optarg[#5]{\ -- #5}% chktex 8
 
   \noindent
   \optarg[#2]{#2}%
@@ -92,16 +89,16 @@
   \rexperiencehead{#1}{#2}{#3}{#4}{#5}
   \begin{itemize}
   \setlength\itemsep{0.25em}
-  \raggedright
-  \vskip 0.5em
+  \raggedright{}
+  \vspace{0.5em}
 }{
   \end{itemize}
-  \vskip 0.5em
+  \vspace{0.5em}
 }
 
 \newenvironment{rexperience}[5]{%
   \rexperiencehead{#1}{#2}{#3}{#4}{#5}
-  \vskip 0.5em
+  \vspace{0.5em}
 }{
-  \vskip 0.5em
+  \vspace{0.5em}
 }
