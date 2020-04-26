@@ -4,6 +4,8 @@
     {}% if #1 is empty
     {#2}% if #1 is not empty
 }
+\newcommand{\collate}[2][]{%
+  \ifthenelse{\isempty{#1}}{#2}{#1}}
 
 %Past/present tense switcher
 %Use this by adding either
@@ -16,8 +18,9 @@
 \newcommand{\pasttense}[2][]{{#2}}
 \newcommand{\presenttense}[2][]{{#1}}
 
-\newcommand{\anonyes}[2]{{#2}}
-\newcommand{\anonno}[2]{{#1}}
+\newcommand{\anonyes}[3][ish]{#3}
+\newcommand{\anonish}[3][ish]{\ifthenelse{\isempty{#1}}{#3}{#2}}
+\newcommand{\anonno}[3][ish]{#2}
 
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
