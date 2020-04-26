@@ -1,82 +1,123 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Long Lined Cover Letter
-% LaTeX Template
-% Version 1.0 (1/6/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Matthew J. Miller
-% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Software Engineering Resume
+%Created 3/24/2010 by Joel Bradshaw
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\errorcontextlines=200
+\documentclass[letterpaper,12pt]{article}
+\usepackage{multicol}
+\usepackage[margin=0.25in,nohead,nofoot]{geometry}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{xifthen}
+\usepackage{fontspec}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\pagestyle{empty}
+%\usepackage{showframe}
+%\usepackage{layout}
 
-\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+\linespread{1.15}
 
-\usepackage{charter} % Use the Charter font for the document text
+%Collapse the spaces in list items for compactness
+\setlist{nolistsep}
 
-\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
-\newlfmP{addrfromphone} % Print a phone number under the sender's address
-\newlfmP{addrfromemail} % Print an email address under the sender's address
-\PhrPhone{Phone} % Customize the "Telephone" text
-\PhrEmail{Email} % Customize the "E-mail" text
 
-%----------------------------------------------------------------------------------------
-%	YOUR NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+\input{util.tex}
 
-\namefrom{Joel Bradshaw} % Name
+\let\pt\pasttense
+\let\anon\anonno
 
-\addrfrom{
-\today\\[12pt] % Date
-2014 NW Glisan St Apt 401 \\ % Address
-Portland, OR 97209
-}
+\setromanfont{Noto Serif}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\newif\ifrobots
+\robotsfalse
 
-\phonefrom{(503) 662-2993} % Phone number
-
-\emailfrom{bradshaw.joel@gmail.com} % Email address
-
-%----------------------------------------------------------------------------------------
-%	ADDRESSEE AND GREETING/CLOSING
-%----------------------------------------------------------------------------------------
-
-\greetto{Hello,} % Greeting text
-\closeline{Best,} % Closing text
-
-\nameto{Mrs. Jane Smith} % Addressee of the letter above the to address
-
-\addrto{
-Recruitment Officer \\ % To address
-The Corporation \\
-123 Pleasant Lane \\
-City, State 12345
-}
-
-%----------------------------------------------------------------------------------------
 
 \begin{document}
-\begin{newlfm}
+\title{Software Engineering Resume}
+\author{\anon{Joel Bradshaw}{Name Lastname}}
+\date{Apr 24, 2020}
 
-%----------------------------------------------------------------------------------------
-%	LETTER CONTENT
-%----------------------------------------------------------------------------------------
+\setlength{\columnsep}{0.5in}
+\columnratio{0.375}
 
-I'm writing in reference to the position for a developer on the Robotics and Internal Tools team. I spoke with Will Fellers about this opening some time ago and met him and some of the team, and from talking with them and seeing what they're working on, it sounds like an exiting opportunity!
+\begin{paracol}{2}
+  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
+  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
+  \backgroundcolor{s}{gray}
 
-I've long been interested in both hardware and geodata, and my background suits me particularly well for adding to this team. My degree is in Electrical Engineering as well as Computer Science, and I very much enjoyed my time at Fluke helping rework their flagship multimeter. Since then I've largely been on the software side professionally, building my skills in full-stack web development, with years of experience ranging from database administration to frontend development across a wide range of languages and technologies, including Python, Javascript, PostgreSQL, and Ansible. Alongside my professional endeavors, I've continued to work on personal projects that incorporate geodata and/or hardware, making many maps, charts, and devices along the way. In both areas, I've used my skills in understanding systems to design and implement solutions and iterate on them to overcome design challenges and track down problems, including working with clients and end-users, to achieve a reliable end product.
+  %%
+  % Header
+  %%
+  \switchcolumn*[{%
+    \vspace*{0.25em}
+    \sffamily
+    \begin{color}{white}
+    \Huge \anon{Joel Bradshaw}{Name Lastname}
+    \hspace{\fill}
+    \large Full-stack Software Developer
+    \end{color}
+    \vspace*{1em}
+  }]
+  \switchcolumn
 
-In looking for my next opportunity, I'm especially interested in positions that will let me use my hardware skills to strengthen a team, or incorporate geospatial data and solutions. Quantum Spatial is an excellent place to explore both of those directions, particularly in the R\&D department, where I can be involved in tackling a variety of interesting problems at the intersection of many of the areas I find most interesting. I'd be thrilled to work with and develop Quantum's extensive array of sensors and analysis tools — figuring out how to gather and combine data to best answer a question is one of my favorite tasks. I look forward to learning more about this position and discussing how I can help Quantum Spatial solve problems and find answers even better.
+  %%
+  % Contact info
+  %%
+  \vspace*{1.5em}
+  \sffamily
+  {\large
+    \vspace{-0.25em} % eat up space above first row
+    \setlength{\tabcolsep}{0.25em}
+    \renewcommand{\arraystretch}{1.2}
+    \noindent
+    \begin{tabular}{c p{15em}}
+      \faHome & \anon[]{2014 NW Glisan St Apt 401}{123 Main St} \newline Portland, OR 97209 \\
+      \faMobilePhone & \anon[]{503.662.2993}{555.867.5309}\\
+      \faEnvelope & \anon[]{bradshaw.joel@gmail.com}{fancy.email@gmail.com}\\
+      \faLinkedin & linkedin.com/in/\anon{cincodenada}{username}
+    \end{tabular}
+  }
 
-%----------------------------------------------------------------------------------------
+\switchcolumn
 
-\end{newlfm}
+%%
+% Letter
+%%
+\vspace{1em}
+
+\hfill\today 
+
+To the hiring manager,
+
+I'm writing in reference to the position for Backend Engineer 2 at Simple. I've been a Simple customer for years,
+and would be happy to join the team and help folks feel more in control of their finances.
+
+My career has been building web services, most recently on the backend of a high-throughput service-oriented system
+that responds to billions of daily requests using data gathered from billions of daily measurements. 
+I consider tests an essential part of any development project, and worked to move to a testing framework that
+better met our needs at Citrix. I have a thorough understanding of databases and the ins and outs of APIs, and while I have had limited
+professional experience in JVM-based languages, I am always up for learning new technologies and I've been interested
+in exploring Scala for a while. I learned C++ for my last position, and I'm confident I could quickly get up to speed with Simple's
+stack as well.
+
+Simple is a company that shares many of the values I look for in a company, and I think it would be a great
+opportunity for me to expand my horizons and contribute to a meaningful product. I look forward to learning
+more about how I could help contribute to the team.
+
+Sincerely,
+
+Joel Bradshaw
+
+
+% This gets us background on the second page
+% Not really sure why but it kinda makes sense?
+\flushpage
+\end{paracol}
+
 \end{document}
