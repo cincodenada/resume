@@ -7,6 +7,9 @@
 \documentclass[letterpaper,12pt]{article}
 \usepackage{multicol}
 \usepackage[margin=0.25in,nohead,nofoot]{geometry}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{graphicx}
 \usepackage{mathptmx}
 \usepackage{enumitem}
 \usepackage{xifthen}
@@ -22,9 +25,11 @@
 
 \linespread{1.15}
 
+\setlength{\RaggedRightParindent}{1.5em}
+
 %Collapse the spaces in list items for compactness
 \setlist{nolistsep}
-
+\setlength{\parskip}{1em}
 
 \input{util.tex}
 
@@ -69,7 +74,6 @@
   %%
   % Contact info
   %%
-  \vspace*{1.5em}
   \sffamily
   {\large
     \vspace{-0.25em} % eat up space above first row
@@ -89,14 +93,19 @@
 %%
 % Letter
 %%
-\vspace{1em}
 
-\hfill\today 
+\hfill\today
 
+\vspace{4em}
+
+\RaggedRight
+\hyphenpenalty=500
+
+\noindent
 To the hiring manager,
 
-I'm writing in reference to the position for Backend Engineer 2 at Simple. I've been a Simple customer for years,
-and would be happy to join the team and help folks feel more in control of their finances.
+I'm writing in reference to the opening listed for Backend Engineer 2 at Simple. I've been a Simple customer for years,
+and would be happy to join the team and start helping folks feel more in control of their finances.
 
 My career has been building web services, most recently on the backend of a high-throughput service-oriented system
 that responds to billions of daily requests using data gathered from billions of daily measurements. 
@@ -111,6 +120,8 @@ opportunity for me to expand my horizons and contribute to a meaningful product.
 more about how I could help contribute to the team.
 
 Sincerely,
+
+\includegraphics[width=20em]{sig.png}
 
 Joel Bradshaw
 
