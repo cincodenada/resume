@@ -17,6 +17,8 @@
 \usepackage{fontspec}
 \usepackage{fontawesome}
 \pagestyle{empty}
+%\usepackage{showframe}
+%\usepackage{layout}
 
 \linespread{1.15}
 
@@ -44,7 +46,6 @@
 \setlength{\columnsep}{0.5in}
 \columnratio{0.35}
 
-
 \begin{paracol}{2}
   \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
   \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
@@ -62,10 +63,11 @@
   }]
   \switchcolumn
 
-  \vspace*{1em}
+  \vspace*{1.5em}
   \sffamily
   {\large
-    \setlength{\tabcolsep}{3pt}
+    \vspace{-0.25em} % eat up space above first row
+    \setlength{\tabcolsep}{0.25em}
     \noindent
     \begin{tabular}{c l}
       \faMobilePhone & \anon[]{503.662.2993}{555.867.5309}\\
@@ -143,9 +145,8 @@
 \end{rsection}
 
 \switchcolumn
-  % rsection already has 6pt of space
 
-\vspace{1.1em}
+\vspace{1.5em}
 \begin{rsection}{Experience}
 \begin{rexperienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{Jul 2017}{Oct 2019}
   \item Maintained cloud-native DNS platform using 9 billion daily measurements to make 3 billion daily decisions
