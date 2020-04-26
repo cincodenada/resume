@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{Phone} % Customize the "Telephone" text
+\PhrEmail{Email} % Customize the "E-mail" text
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Joel Bradshaw} % Name
+
+\addrfrom{
+\today\\[12pt] % Date
+2014 NW Glisan St Apt 401 \\ % Address
+Portland, OR 97209
+}
+
+\phonefrom{(503) 662-2993} % Phone number
+
+\emailfrom{bradshaw.joel@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{Hello,} % Greeting text
+\closeline{Best,} % Closing text
+
+\nameto{Mrs. Jane Smith} % Addressee of the letter above the to address
+
+\addrto{
+Recruitment Officer \\ % To address
+The Corporation \\
+123 Pleasant Lane \\
+City, State 12345
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+I'm writing in reference to the position for a developer on the Robotics and Internal Tools team. I spoke with Will Fellers about this opening some time ago and met him and some of the team, and from talking with them and seeing what they're working on, it sounds like an exiting opportunity!
+
+I've long been interested in both hardware and geodata, and my background suits me particularly well for adding to this team. My degree is in Electrical Engineering as well as Computer Science, and I very much enjoyed my time at Fluke helping rework their flagship multimeter. Since then I've largely been on the software side professionally, building my skills in full-stack web development, with years of experience ranging from database administration to frontend development across a wide range of languages and technologies, including Python, Javascript, PostgreSQL, and Ansible. Alongside my professional endeavors, I've continued to work on personal projects that incorporate geodata and/or hardware, making many maps, charts, and devices along the way. In both areas, I've used my skills in understanding systems to design and implement solutions and iterate on them to overcome design challenges and track down problems, including working with clients and end-users, to achieve a reliable end product.
+
+In looking for my next opportunity, I'm especially interested in positions that will let me use my hardware skills to strengthen a team, or incorporate geospatial data and solutions. Quantum Spatial is an excellent place to explore both of those directions, particularly in the R\&D department, where I can be involved in tackling a variety of interesting problems at the intersection of many of the areas I find most interesting. I'd be thrilled to work with and develop Quantum's extensive array of sensors and analysis tools — figuring out how to gather and combine data to best answer a question is one of my favorite tasks. I look forward to learning more about this position and discussing how I can help Quantum Spatial solve problems and find answers even better.
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
