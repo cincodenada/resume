@@ -7,6 +7,11 @@
 \newcommand{\collate}[2][]{%
   \ifthenelse{\isempty{#1}}{#2}{#1}}
 
+% General split util for below
+\def\bothwords#1 #2\relax{#1 #2}
+\def\firstword#1 #2\relax{#1}
+\def\secondword#1 #2\relax{#2}
+
 %Past/present tense switcher
 %Use this by adding either
 %\let\pt\pasttense or \let\pt\presenttense
@@ -21,6 +26,9 @@
 \newcommand{\anonyes}[3][ish]{#3}
 \newcommand{\anonish}[3][ish]{\ifthenelse{\isempty{#1}}{#3}{#2}}
 \newcommand{\anonno}[3][ish]{#2}
+
+\newcommand{\monthyes}[1]{\expandafter\bothwords#1\relax}
+\newcommand{\monthno}[1]{\expandafter\secondword#1\relax}
 
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
@@ -67,8 +75,10 @@
   \large \textbf{#1}%
   \hfill
   \normalsize
-  \optarg[#4]{#4}%
-  \optarg[#5]{\ -- #5}% chktex 8
+  \optarg[#4]{\month{#4}}%
+  \ifthenelse{\equal{\month{#4}}{\month{#5}}}
+    {}
+    {\optarg[#5]{\ -- \month{#5}}}% chktex 8
 
   \noindent
   \optarg[#2]{#2}%
