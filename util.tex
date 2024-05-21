@@ -34,7 +34,7 @@
 %Should contain one or more subsections
 \newenvironment{rsection}[1]{%
   \noindent
-  {\sffamily \Large \textbf{#1}}\\
+  {\Large \textbf{#1}}\\
   \rule[8pt]{\textwidth}{0.5pt}
   \vskip -8pt
 }{
@@ -45,7 +45,7 @@
 \newenvironment{rsubsection}[1]{%
   \vskip 6pt
   \noindent
-  {\sffamily \large \textbf{#1}}
+  {\large \textbf{#1}}
   \raggedright{}
 }{
   \vspace{0.5em}
@@ -66,7 +66,8 @@
 \newenvironment{rcontent}[1]{%
   \vskip 4pt
   \noindent
-  \sffamily \large{#1}
+  \large{#1}
+  \normalsize
 }{
 }
 

@@ -26,13 +26,12 @@
 
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
-
+\renewcommand{\familydefault}{\sfdefault}
 \newif\ifrobots
 \robotsfalse
 
-\begin{document}
 
-\sffamily
+\begin{document}
 \title{Software Engineering Resume}
 \author{\anon{Ell Bradshaw}{Name Lastname}}
 \date{11 Jul 2023}
@@ -47,7 +46,6 @@
 
 \vspace{1.5em}
 
-\rmfamily
 \begin{rsection}{Summary of Qualifications}
   \noindent
   \begin{minipage}{\columnwidth}
@@ -103,7 +101,7 @@
   \item Smoothly migrated several tightly-integrated projects into a monorepo without disrupting team workflow, dramatically improving release times
   % \item Established frontend testing to an existing project
 \end{rexperienceitem}
-  \begin{rexperienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{July 2017}{October 2019}
+\begin{rexperienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{July 2017}{October 2019}
   \item Maintained cloud-native DNS platform using 9 billion daily measurements to make 3 billion daily decisions
   \item Led implementation of just-in-time DNSSEC in our dynamic DNS server, consulting RFCs and real-world usage
   \item Integrated new datastream into pipeline, working with partner vendor to identify and analyze key metrics
