@@ -62,23 +62,35 @@
 }
 
 
+\newcommand{\rexperiencehead}[5]{
+  \large \textbf{#1}%
+  \hfill
+  \normalsize
+  \optarg[#4]{#4}%
+  \optarg[#5]{ -- #5}%
+
+  \noindent
+  \optarg[#2]{#2}%
+  \normalsize
+  \hfill
+  \optarg[#3]{#3}%
+}
+
 %An item under "Experience" - subclass of subsection.
 %Includes and formats company and optional location, start, and end date.
 \newenvironment{rexperienceitem}[5]{%
-  \begin{rsubsection}{#1%
-      \textit{%
-          \optarg[#2]{ - #2}%
-          \optarg[#3]{, #3}%
-      }
-      \textnormal{
-          \sffamily
-          \normalsize
-          \hfill
-          \optarg[#4]{#4}%
-          \optarg[#5]{ -- #5}%
-      }
-  }
+  \rexperiencehead{#1}{#2}{#3}{#4}{#5}
+  \begin{itemize}
+  \setlength\itemsep{0.25em}
+  \vskip 0.5em
 }{
-  \end{rsubsection}
+  \end{itemize}
+  \vskip 0.5em
 }
 
+\newenvironment{rexperience}[5]{%
+  \rexperiencehead{#1}{#2}{#3}{#4}{#5}
+  \vskip 0.5em
+}{
+  \vskip 0.5em
+}
