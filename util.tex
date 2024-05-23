@@ -22,7 +22,7 @@
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
 \newenvironment{rsection}[1]{%
-  \vskip 6pt
+  \vskip 0.5em
   \noindent
   {\sffamily \Large \textbf{#1}}\\
   \rule[8pt]{\textwidth}{0.5pt}
@@ -37,9 +37,17 @@
   \noindent
   {\sffamily \large \textbf{#1}}
   \vskip 2pt
+  \raggedright
+}{
+  \vskip 0.5em
+}
+
+\newenvironment{rsubitems}[1]{%
+  \begin{rsubsection}{#1}
   \begin{itemize}
 }{
   \end{itemize}
+  \end{rsubsection}
 }
 
 \newcommand\nonitem{\item[] \hspace{-10pt}}
@@ -52,6 +60,7 @@
   \sffamily \large{#1}
 }{
 }
+
 
 %An item under "Experience" - subclass of subsection.
 %Includes and formats company and optional location, start, and end date.
