@@ -21,7 +21,7 @@
 
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
-\newenvironment{res_section}[1]{%
+\newenvironment{rsection}[1]{%
   \vskip 6pt
   \noindent
   {\sffamily \Large \textbf{#1}}\\
@@ -32,7 +32,7 @@
 
 %Subsection within main section - Skills, Projects, etc
 %Encloses several \items in an itemize list
-\newenvironment{res_subsection}[1]{%
+\newenvironment{rsubsection}[1]{%
   \vskip 6pt
   \noindent
   {\sffamily \large \textbf{#1}}
@@ -46,7 +46,7 @@
 
 %Subsection within main section - Skills, Projects, etc
 %Encloses several \items in an itemize list
-\newenvironment{res_content}[1]{%
+\newenvironment{rcontent}[1]{%
   \vskip 4pt
   \noindent
   \sffamily \large{#1}
@@ -55,8 +55,8 @@
 
 %An item under "Experience" - subclass of subsection.
 %Includes and formats company and optional location, start, and end date.
-\newenvironment{res_experienceitem}[5]{%
-  \begin{res_subsection}{#1%
+\newenvironment{rexperienceitem}[5]{%
+  \begin{rsubsection}{#1%
       \textit{%
           \optarg[#2]{ - #2}%
           \optarg[#3]{, #3}%
@@ -70,6 +70,6 @@
       }
   }
 }{
-  \end{res_subsection}
+  \end{rsubsection}
 }
 
