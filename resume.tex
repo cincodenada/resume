@@ -17,6 +17,7 @@
 \usepackage{fontawesome}
 \pagestyle{empty}
 
+\linespread{1.15}
 
 %Collapse the spaces in list items for compactness
 \setlist{nolistsep}
@@ -31,6 +32,9 @@
 \setromanfont{Noto Serif}
 \setsansfont{Lato}
 \renewcommand{\familydefault}{\sfdefault}
+
+\newif\ifrobots
+\robotsfalse
 
 
 \begin{document}
@@ -73,10 +77,20 @@
     \end{tabular}
   }
 
-%\begin{res_subsection}{Skills:}
+\begin{res_section}{Summary}
+  \noindent
+  \begin{minipage}{\columnwidth}
+  10 yrs experience building cloud-native applications, from database design and server management up through front-end development.
+  Most recently worked on the backend of a high-throughput intelligent DNS service, managing a highly-distributed fleet of
+  global DNS servers. Always excited to learn new languages and technologies, and relish in understanding the ins and outs of large systems.
+  Convinced that good data collection, analysis, and visualization is crucial for any complex application. Facilitator of healthy communication
+  between and within teams.
+  \end{minipage}
+\end{res_section}
+%\begin{res_subsection}{Key Skills:}
+%  \item Full-stack development of distributed, reliable applications in a multi-cloud environment
 %  \item Building performance-sensitive, high-throughput systems, balancing speed, complexity, and maintainability
-%  \item Developing distributed, reliable applications in a multi-cloud environment
-%  \item Administering Linux systems, tracing logfiles and monitoring, efficiently troubleshooting across the full stack
+%  \item Administering Linux systems, monitoring resources, efficiently troubleshooting problems
 %  \item Quickly understanding large projects and systems, learning new languages and technologies as needed
 %  \item Engaging productively within a team to resolve disagreements and help best use members' individual skills
 %  \item Working and communicating with end-users personably and comfortably
@@ -100,7 +114,7 @@
     \begin{sloppypar}%
     \raggedright
     \noindent%
-    Rust, Go, Scala, Haskell, Ruby, Piet, Z80/M8C/MIPS Assembly
+    Rust, Go, Scala, Haskell, Piet, Z80/M8C/MIPS Assembly
     \end{sloppypar}
   \end{res_content}
 
@@ -111,9 +125,10 @@
   \begin{res_para}{Interests:}%
     \raggedright
     Passionate about charts, graphs, mapping, and other beautiful data.\\
-
+ \ifrobots
 
     Continued personal experience working with microcontrollers and EDA (KiCad, Eagle)
+ \fi
   \end{res_para}
 \end{res_section}
 
@@ -122,27 +137,27 @@
   \vspace{6pt}
 
 \begin{res_section}{Experience}
-  \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{Sep 2017}{Oct 2019}
+  \begin{res_experienceitem}{Senior Software Engineer 2}{Citrix (acquired Cedexis)}{Portland, OR}{Jul 2017}{Oct 2019}
   \item Maintained cloud-native DNS platform using 9 billion daily measurements to make 3 billion daily decisions
   \item Led implementation of just-in-time DNSSEC in our dynamic DNS server, consulting RFCs and real-world usage
   \item Integrated new datastream into pipeline, working with partner vendor to identify and analyze key metrics
   \item Rearchitected and took ownership of connection manager that maintains tunnels between our 150+ servers
   \item Analyzed and provided visibility into BigQuery usage costs, immediately reducing our monthly spend by 20\%
-  \item Acted as liaison between teams, helping resolve disagreements and come up with solutions to disparate goals
+  \item Used perf and flamegraphs to identify and rewrite bottlenecks, e.g. reducing config read time by 30\%
+  \item Acted as liaison between teams, helping to devise solutions that acoomplish everyone's goals
 \end{res_experienceitem}
-\begin{res_experienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{Sep 2009}{{\pt[Present]{Mar 2017}}}
-  \item Buil\pt[d]{t} SaaS web analytics application from the ground up to over 400 customers and \$60k MRR
-  \item Plan\pt{ned} long-term and short-term roadmaps for the company in cooperation with CEO
-  \item Manage\pt{d} junior developer, assigning tasks, assisting with questions, and introducing to the codebase
-  \item Develop\pt{ed} Puppet spec for dozens of Linux servers, increasing reliability and reducing deploy time 10x
-  \item Provision\pt{ed} machines from diverse providers including Linode, DigitalOcean, AWS, and colocated bare-metal
-  \item Maintain\pt{ed} and improve\pt{d} queue-worker cluster using several stages to process data from \textgreater500k daily jobs
-  \item Manage\pt{d} MySQL servers and schema for 250GB dataset with \textgreater1m rows added per day
-  \item Supervise\pt{d} transition to a sharded HA database cluster using MySQL Fabric and data warehousing,\
+\begin{res_experienceitem}{Founding Engineer}{SERPs.com}{Portland, OR}{Sep 2009}{Mar 2017}
+  \item Built SaaS web analytics application from the ground up to over 400 customers and \$60k MRR
+  \item Managed junior developer, assigning tasks, assisting with questions, and introducing to the codebase
+  \item Developed Puppet spec to manage our infrastructure, increasing reliability and reducing deploy time 10x
+  \item Provisioned machines from diverse providers including Linode, DigitalOcean, AWS, and colocated bare-metal
+  \item Maintained and improved queue-worker cluster using several stages to process data from \textgreater500k daily jobs
+  \item Managed MySQL servers and schema for a midsize database with \textgreater1m rows added per day
+  \item Supervised transition to a sharded HA database cluster using MySQL Fabric and data warehousing,\\
         improving loadtime of most-used page \textgreater100x for large customers
-  \item Add\pt{ed} functionality and fix\pt{ed} bugs in outdated C extension, allowing PHP to connect to current Fabric
-  \item Wr\pt[i]{o}te hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
-  \item Buil\pt[d]{t} monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
+  \item Added functionality and fixed bugs in outdated C extension, allowing PHP to connect to current Fabric
+  \item Wrote hundreds of unit tests to cover thousands of LOC with custom Jenkins continuous integration server
+  \item Built monitoring system with TICK stack and Grafana, improving issue response time and speeding diagnosis
 \end{res_experienceitem}
 \begin{res_experienceitem}{IT Specialist}{Seattle Fire Department}{Seattle, WA}{Sep 2010}{Jun 2011}
   \item Tested and filed bug reports for custom in-house applications on a variety of platforms
@@ -152,7 +167,7 @@
 \end{res_experienceitem}
 \begin{res_experienceitem}{Summer Software/Hardware Intern}{Fluke Corporation}{Everett, WA}{Jun 2010}{Sep 2010}
   \item Modified software and hardware in an existing product to meet higher safety requirements
-  \item Verified new hardware and firmware in established testing harness and added tests for new components
+  \item Wrote firmware to support new hardware in existing codebase, integrating with existing test suite
   \item Designed part of a complex system in coordination with a team of software and hardware engineers
 \end{res_experienceitem}
 \end{res_section}
@@ -169,6 +184,18 @@
       Seattle Pacific University, June 2011}
 }
 \end{res_content}
+\end{res_section}
+
+\begin{res_section}{Volunteer Work}
+  \begin{res_experienceitem}{Riser Coordinator}{Portland Gay Men's Chorus}{Portland, OR}{Nov 2015}{Present}
+    \item Coordinate with storage company to schedule delivery and pickup of risers for every show
+    \item Supervise construction of riser system, orienting new members and delegating to trusted members
+    \item Coordinate all-hands teardown, coordinating inexperienced members to ensure safe and 
+  \end{res_experienceitem}
+  \begin{res_experienceitem}{Section Representative}{Portland Gay Men's Chorus}{Portland, OR}{Sep 2012}{Present}
+    \item Field questions and issues from members, either solving or escalating as necessary
+    \item Coordinate with membership team to address changing needs and leadership
+  \end{res_experienceitem}
 \end{res_section}
 
 % This gets us background on the second page
