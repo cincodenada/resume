@@ -1,3 +1,3 @@
 #!/bin/bash
-xelatex resume.tex && \
+xelatex --interaction=nonstopmode resume.tex && \
 xdg-open resume.pdf
