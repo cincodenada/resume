@@ -33,26 +33,24 @@
 %Main section - Qualifications, Education, Experience.
 %Should contain one or more subsections
 \newenvironment{rsection}[1]{%
+  \vspace{1em}
   \noindent
   {\Large \textbf{#1}}\\
   \rule[8pt]{\textwidth}{0.5pt}
-  \vskip -8pt
 }{
 }
 
 %Subsection within main section - Skills, Projects, etc
 %Encloses several \items in an itemize list
 \newenvironment{rsubsection}[1]{%
-  \vskip 6pt
+  \vspace{0.5em}\\
   \noindent
   {\large \textbf{#1}}
   \raggedright{}
 }{
-  \vspace{0.5em}
 }
 
 \newenvironment{rsubitems}[1]{%
-  \vspace{0.5em}
   \begin{rsubsection}{#1}
   \vspace{0.1em}
   \begin{itemize}
@@ -64,7 +62,6 @@
 %Subsection within main section - Skills, Projects, etc
 %Encloses several \items in an itemize list
 \newenvironment{rcontent}[1]{%
-  \vskip 4pt
   \noindent
   \large{#1}
   \normalsize
@@ -73,6 +70,7 @@
 
 
 \newcommand{\rexperiencehead}[5]{%
+  \noindent
   \large \textbf{#1}%
   \hfill
   \normalsize
