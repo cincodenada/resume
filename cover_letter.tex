@@ -1,0 +1,146 @@
+%Software Engineering Resume
+%Created 3/24/2010 by Joel Bradshaw
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\errorcontextlines=200
+\documentclass[letterpaper,12pt]{article}
+\usepackage{multicol}
+\usepackage[margin=0.25in,nohead,nofoot]{geometry}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{xifthen}
+\usepackage{fontspec}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{changepage}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\pagestyle{empty}
+%\usepackage{showframe}
+%\usepackage{layout}
+
+\linespread{1.15}
+
+\setlength{\RaggedRightParindent}{1.5em}
+
+%Collapse the spaces in list items for compactness
+\setlist{nolistsep}
+\setlength{\parskip}{0.75em}
+
+\input{util.tex}
+
+\let\pt\pasttense
+\let\anon\anonno
+
+\setromanfont{Noto Serif}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\newif\ifrobots
+\robotsfalse
+
+
+\begin{document}
+\title{Software Engineering Resume}
+\author{\anon{Joel Bradshaw}{Name Lastname}}
+\date{Apr 24, 2020}
+
+\setlength{\columnsep}{0.5in}
+\columnratio{0.3}
+
+\begin{paracol}{2}
+  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
+  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
+  \backgroundcolor{s}{gray}
+
+  %%
+  % Header
+  %%
+  \switchcolumn*[{%
+    \vspace*{-1em}
+    \sffamily
+    \begin{color}{white}
+    \Huge \anon{Joel Bradshaw}{Name Lastname}
+    \hspace{\fill}
+    \large Full-stack Software Developer
+    \end{color}
+    \vspace*{1em}
+  }]
+  \switchcolumn
+
+  %%
+  % Contact info
+  %%
+  \sffamily
+  {\large
+    \small
+    \vspace{-0.25em} % eat up space above first row
+    \setlength{\tabcolsep}{0.25em}
+    \renewcommand{\arraystretch}{1.2}
+    \noindent
+    \begin{tabular}{c p{15em}}
+      \faHome & \anon[]{2014 NW Glisan St Apt 401}{123 Main St} \newline Portland, OR 97209 \\
+      \faMobilePhone & \anon[]{503.662.2993}{555.867.5309}\\
+      \faEnvelope & \anon[]{bradshaw.joel@gmail.com}{fancy.email@gmail.com}\\
+      \faLinkedin & linkedin.com/in/\anon{cincodenada}{username}
+    \end{tabular}
+  }
+
+\switchcolumn
+
+%%
+% Letter
+%%
+
+\hfill\today
+
+\vspace{1em}
+
+\RaggedRight
+%\hyphenpenalty=100000
+
+\noindent
+To the hiring manager,
+
+I'm excited about the Software Engineer position on the Language \& Translation team at
+Wikimedia, firstly of course because I've long relied on various Wikimedia projects to sate my endless curiosity
+about the world. This position is an opportunity to contribute in a unique way to the crucial projects
+the foundation oversees, and I would be thrilled to be part of the team that
+ensures those projects are available to a wider global audience.
+
+It's also an exciting opportunity because it fits my skillset well.
+I've built a successful LAMP stack application from the ground up, modernized code
+by building out testing, worked closely with my teammates on code reviews and architecture,
+communicated effectively with colleagues around the globe. Moreso, this position would also allow me to invest
+in areas that I'm passionate about but haven't gotten to engage in professionally. I've often
+said that there's an alternate universe in which I was a linguistics major, I have talked many friends'
+ears off about the importance of Unicode for global equality, and I find the unique challenges
+of translation and internationalization fascinating.
+
+I believe that open knowledge and open software are crucial to making the internet accessible
+to all, and in today's world that access to the internet is fundamental to addressing global inequality.
+Education is a crucial tool for empowering underprivileged groups, and Wikimedia's many projects
+address that need head-on. This team's work in particular is so important because information can only
+truly belong to everyone if everyone can access it in their own language. Helping to further that
+work is one of the best possible uses of my time and skills.
+
+This position is well-suited to my experience, and involves much of what I am passionate about, including
+free and open knowledge, equal accessibility of information, and working for the sake of the public
+good. I look forward to talking with you about how I can contribute to making Wikimedia a stronger, more
+inclusive organization.
+
+Sincerely,
+
+\includegraphics[width=20em]{sig.png}
+
+Joel Bradshaw
+
+% This gets us background on the second page
+% Not really sure why but it kinda makes sense?
+\flushpage
+\end{paracol}
+
+\end{document}
