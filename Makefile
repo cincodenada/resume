@@ -1,6 +1,6 @@
 .PHONY: view watch
 
-default: resume.pdf
+default: resume.pdf cover_letter.pdf
 
 watch:
 	while true; do \
