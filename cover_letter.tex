@@ -51,45 +51,21 @@
 \setlength{\columnsep}{0.5in}
 \columnratio{0.3}
 
-\begin{paracol}{2}
-  \backgroundcolor{c[0](0pt, 0pt)(0.25in, 0pt)}{lightgray}
-  \backgroundcolor{C[0](10000pt,10000pt)(0.25in,10000pt)}{lightgray}
-  \backgroundcolor{s}{gray}
 
-  %%
-  % Header
-  %%
-  \switchcolumn*[{%
-    \vspace*{-1em}
-    \sffamily
-    \begin{color}{white}
-    \Huge \anon{Ell Bradshaw}{Name Lastname}
-    \hspace{\fill}
-    \large Full-stack Software Developer
-    \end{color}
-    \vspace*{1em}
-  }]
-  \switchcolumn
+\fcolorbox{black}{lightgray}{
+\begin{minipage}{\columnwidth}
+{\fboxsep1em \Huge \anon{Ell Bradshaw}{Name Lastname}}\\
+\end{minipage}}
+\vspace*{2pt}
+{\large
+    \anon[]{503.662.2993}{555.867.5309} \textbullet{}
+    Portland, OR \textbullet{}
+    \anon[]{jobs@c9a.co}{fancy.email@gmail.com}\\
+    \anon{cincodenada.com}{myportfolio.com} \textbullet{}
+    github.com/\anon{cincodenada}{username}
+}
+\end{center}
 
-  %%
-  % Contact info
-  %%
-  \sffamily
-  {\large
-    \small
-    \vspace{-0.25em} % eat up space above first row
-    \setlength{\tabcolsep}{0.25em}
-    \renewcommand{\arraystretch}{1.2}
-    \noindent
-    \begin{tabular}{c p{15em}}
-      \faHome & \anon[]{2014 NW Glisan St Apt 401}{123 Main St} \newline Portland, OR 97209 \\
-      \faMobilePhone & \anon[]{503.662.2993}{555.867.5309}\\
-      \faEnvelope & \anon[]{bradshaw.joel@gmail.com}{fancy.email@gmail.com}\\
-      \faLinkedin & linkedin.com/in/\anon{cincodenada}{username}
-    \end{tabular}
-  }
-
-\switchcolumn
 
 %%
 % Letter
@@ -152,6 +128,5 @@ Ell Bradshaw
 % This gets us background on the second page
 % Not really sure why but it kinda makes sense?
 \flushpage
-\end{paracol}
 
 \end{document}
